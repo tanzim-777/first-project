@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Root from './components/Root'
 const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
+    <Root></Root>
     </div>
   )
 }
