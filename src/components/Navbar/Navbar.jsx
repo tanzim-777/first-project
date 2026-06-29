@@ -18,7 +18,7 @@ const Navbar = () => {
 
 
 
-        <nav className=" bg-amber-800 p-2 md:py-6 relative">
+        <nav className="bg-gradient-to-r from-emerald-500 to-emerald-900 p-2 md:py-6 relative sticky top-0">
             <div className="container mx-auto flex justify-between items-center ">
 
                 {/* mobile menu button - left side */}
@@ -32,29 +32,30 @@ const Navbar = () => {
 
                 {/* desktop menu */}
                 <ul className="hidden md:flex space-x-17">
-                    <li> <Link> Home </Link></li>
-                    <li><Link> Products </Link></li>
-                    <li><Link> Blogs </Link></li>
-                    <li><Link> Contact </Link></li>
-                    <li><Link> About </Link></li>
+                    <li> <Link to={'/'} className="relative inline-block transition-all duration-300 hover:scale-110 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full"
+                    > Home </Link>     </li>
+                    <li> <Link to={'Products'} className="relative inline-block transition-all duration-300 hover:scale-110 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full "> Products </Link> </li>
+                    <li> <Link to={'Blogs'} className="relative inline-block transition-all duration-300 hover:scale-110 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full"> Blogs </Link>    </li>
+                    <li> <Link to={'Contact'} className="relative inline-block transition-all duration-300 hover:scale-110 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full"> Contact </Link>  </li>
+                    <li> <Link to={'About'} className="relative inline-block transition-all duration-300 hover:scale-110 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-red-500 after:transition-all after:duration-200 hover:after:w-full"> About </Link>    </li>
                 </ul>
 
-                <button className="hidden md:block">Login</button>
+                <button className="hidden md:block bg-orange-600 text-black h-7 w-17 rounded-full transition-all duration-200 hover:scale-110 ">Login</button>
 
-        {/* mobile menu collapsed */}
+                {/* mobile menu collapsed */}
 
-        <div className={`md:hidden w-full absolute bg-green-500 top-full left-0 ${isOpen ? 'block' : 'hidden'}`}>
-            <ul className="flex flex-col items-center py-3 space-y-3">
-                    <li>Home</li>
-                    <li>Products</li>
-                    <li>Blogs</li>
-                    <li>Contact</li>
-                    <li>About</li>
-                    <li>
-                         <button className="">Login</button>
-                    </li>
-                </ul>
-        </div>
+                <div className={`md:hidden w-full absolute bg-green-500 top-full left-0 ${isOpen ? 'block' : 'hidden'}`}>
+                    <ul className="flex flex-col items-center py-3 space-y-3">
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>Blogs</li>
+                        <li>Contact</li>
+                        <li>About</li>
+                        <li>
+                            <button className="">Login</button>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
         </nav>
