@@ -4,6 +4,7 @@ Navbar
 const Root = () => {
   return (
     <div>
+       
      <Navbar></Navbar>
     </div>
   )
