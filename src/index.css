@@ -1,5 +1,6 @@
 @import "tailwindcss";
-*{
+
+:where(*):not([class*="text-"]) {
   color: white;
 }
 
