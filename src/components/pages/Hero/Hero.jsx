@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import heroBg from '../assets/hero.jpg'
+import heroBg from '../../../assets/hero.jpg'
 
 const Hero = () => {
   const navigate = useNavigate()
